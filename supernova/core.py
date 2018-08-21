@@ -99,8 +99,8 @@ class Supernova(object):
             setattr(self, attr, val)
         
         # If the machine learning model exists, load it
-        if os.path.exists("{}__model.pkl".format(self.filename)):
-            self.model = joblib.load("{}__model.pkl".format(self.filename))
+        if os.path.exists("{}.pkl".format(self.filename)):
+            self.model = joblib.load("{}.pkl".format(self.filename))
 
     def generate_features(self, x1, x2, cross=True):
         """
@@ -197,7 +197,7 @@ class Supernova(object):
         cross_val.fit(features, targets)
 
         # Save the model to disk and to object
-        joblib.dump(cross_val.best_estimator_, "{}__model.pkl".format(self.filename))
+        joblib.dump(cross_val.best_estimator_, "{}.pkl".format(self.filename))
         self.model = cross_val.best_estimator_
 
         # Score the best model by 5-fold cross-validation
