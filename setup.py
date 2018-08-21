@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-    name="supernova",
+    name="spacedust",
     version="0.1.1",
     description="Blows away all that is unnecessary.",
-    url="http://github.com/QCaudron/supernova",
+    url="http://github.com/QCaudron/spacedust",
     author="Quentin CAUDRON",
     author_email="quentincaudron@gmail.com",
     license="MIT",
-    packages=["supernova"],
+    packages=["spacedust"],
     zip_safe=False,
     install_requires=[
         "numpy>=1.13",

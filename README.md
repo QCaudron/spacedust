@@ -1,11 +1,11 @@
-# supernova
+# spacedust 
 
-Blows away all that is unnecessary.
+Sprinkle a little cosmic dust on your data.
 
 
 ## Pairwise object deduping
 
-**supernova** is a convenience interface around *xgboost* and *sklearn*, providing an API for
+**spacedust** is a convenience interface around *xgboost* and *sklearn*, providing an API for
 building out pairwise deduplication models. It works like this.
 
 ### Data
@@ -66,7 +66,7 @@ isn't fun but is unfortunately necessary.
 
 ### Features
 
-**supernova**'s compares pairs of datapoints, and generates *feature values* for each pair,
+**spacedust**'s compares pairs of datapoints, and generates *feature values* for each pair,
 based on what you tell it to look for. For example, you might look at this data and say, 
 "well if the street number is the same, that's a good indicator ( although not a guarantee ) 
 that these are the same places". So, you might come up with a feature like this :
@@ -103,11 +103,11 @@ def commercial_properties_distance(first, second):
 
 ### Building the deduper
 
-The most basic deduper inherits from the `Supernova` class, and wants a list of feature functions.
+The most basic deduper inherits from the `Dust` class, and wants a list of feature functions.
 ```
-from supernova import Supernova
+from spacedust import Dust
 
-class AddressDeduper(Supernova):
+class AddressDeduper(Dust):
 
     filename = "my_address_deduper"
 
@@ -188,14 +188,13 @@ a good place, but this is not guaranteed.
 
 Probably the easiest way is to 
 ```
-pip install git+https://github.com/qcaudron/supernova.git@<COMMIT_HASH>#egg=supernova
+pip install git+https://github.com/qcaudron/spacedust.git@<COMMIT_HASH>#egg=spacedust
 ```
 
-Unfortunately, someone else has *supernova* on PyPI. :sadface:
 
 
 ## TO DO
 
-1. Serialise featuresets and complete Supernova model saving
+1. Serialise featuresets and complete Dust model saving
 2. Expand docs to describe hyperparameters
 3. Put together complete notebook of examples
