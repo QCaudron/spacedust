@@ -206,5 +206,3 @@ class Dust(object):
 
     def __repr__(self):
         return "Dust"
-
-
